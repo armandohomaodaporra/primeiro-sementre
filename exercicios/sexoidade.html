@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pagina html</title>
+	<script>
+		function pessoa1() {
+		sexo1=document.getElementById('sexo1').value
+		idade1=document.getElementById('idade1').value
+		sexo2=document.getElementById('sexo2').value
+		idade2=document.getElementById('idade2').value
+		sexo3=document.getElementById('sexo3').value
+		idade3=document.getElementById('idade3').value
+		sexo4=document.getElementById('sexo4').value
+		idade4=document.getElementById('idade4').value
+		sexo5=document.getElementById('sexo5').value
+		idade5=document.getElementById('idade5').value
+		sexo6=document.getElementById('sexo6').value
+		idade6=document.getElementById('idade6').value
+
+       if (idade1 > idade2 & idade3 & idade4 & idade5 & idade6) {
+       	velho=idade1;
+       	msg.innerHTML=("o mais velho tem "+velho+" anos de idade"+" e é do soxo "+sexo1)
+
+       }else if (idade2 > idade1 & idade3 & idade4 & idade5 & idade6) {
+       	velho=idade2;
+       	msg.innerHTML=("o mais velho tem "+velho+" anos de idade"+" e é do soxo "+sexo2)
+       }
+       else if (idade3 > idade2 & idade1 & idade4 & idade5 & idade6) {
+       	velho=idade3;
+       	msg.innerHTML=("o mais velho tem "+velho+" anos de idade"+" e é do soxo "+sexo3)
+       }
+       else if (idade4 > idade2 & idade3 & idade1 & idade5 & idade6) {
+       	velho=idade4;
+       	msg.innerHTML=("o mais velho tem "+velho+" anos de idade"+" e é do soxo "+sexo4)
+       }
+       else if (idade5 > idade2 & idade3 & idade4 & idade1 & idade6) {
+       	velho=idade5;
+       	msg.innerHTML=("o mais velho tem "+velho+" anos de idade"+" e é do soxo "+sexo5)
+       }
+       else if (idade6 > idade2 & idade3 & idade4 & idade5 & idade1) {
+       	velho=idade6;
+       	msg.innerHTML=("o mais velho tem "+velho+" anos de idade"+" e é do soxo "+sexo6)
+       }
+
+
+		}
+	
+		
+	</script>
+</head>
+<body>
+
+ <label>sexo</label>
+<input id="sexo1" placeholder="ex masculino ou feminino" type="text">
+
+ <label>idade</label>
+<input id="idade1" type="number"><br><p>
+
+
+ <label>sexo</label>
+<input id="sexo2" placeholder="ex masculino ou feminino" type="text">
+
+ <label>idade</label>
+<input id="idade2" type="number"><br><p>
+
+
+ <label>sexo</label>
+<input id="sexo3" placeholder="ex masculino ou feminino"type="text">
+
+ <label>idade</label>
+<input id="idade3"  type="number"><br><p>
+
+
+ <label>sexo</label>
+<input id="sexo4" placeholder="ex masculino ou feminino"  type="text">
+
+ <label>idade</label>
+<input id="idade4" type="number"><br><p>
+
+
+ <label>sexo</label>
+<input id="sexo5" placeholder="ex masculino ou feminino" type="text">
+
+ <label>idade</label>
+<input id="idade5" type="number"><br><p>
+
+ <label>sexo</label>
+<input id="sexo6" placeholder="ex masculino ou feminino" type="text">
+
+ <label>idade</label>
+<input id="idade6"  type="number"><br><p>
+
+<button onclick="pessoa1()">confimar</button>
+
+
+<div id="msg" ></div>
+
+</body>
+</html>

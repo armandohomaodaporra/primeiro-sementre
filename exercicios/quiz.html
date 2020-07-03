@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          
+	<title>quiz</title>
+
+	<script>
+
+	function recarregar() {
+      document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+    document.getElementById("inicio").style.display = "none";
+
+}
+
+;
+  
+var marca = 0;
+
+ function sai_notificacao () {
+    document.getElementById("alerta").style.display = "none";
+     document.getElementById("alerta2").style.display = "none";
+      document.getElementById("alerta3").style.display = "none";
+       document.getElementById("alerta4").style.display = "none";
+        document.getElementById("alerta5").style.display = "none";
+    }
+
+	function a() {
+document.getElementById("proxima").value = "a";
+ marca = 1
+
+
+
+}
+
+
+	function b() {
+document.getElementById("proxima").value = "b";
+ marca = 1;
+}
+
+function c() {
+document.getElementById("proxima").value = "c";
+ marca = 1;
+}
+
+
+function d() {
+document.getElementById("proxima").value = "d";
+ marca = 1;
+
+}
+
+
+var certas = 0;
+
+function questao1() {
+alter = document.getElementById("proxima").value;
+
+
+
+
+if (marca==0) {
+    setTimeout("sai_notificacao()", 1700);
+
+
+alerta.innerHTML="MARQUE PELO MENOS UMA ALTERNATIVA !!!";
+document.getElementById("alerta").style.display = "block";
+
+}
+
+else if (alter =="b") {
+
+certas = certas + 1;  
+	  document.getElementById("questao2").style.display = "block";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+    marca=0;
+
+}else{
+    document.getElementById("questao2").style.display = "block";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+marca=0;
+}
+}
+
+
+
+function questao2() {
+alter = document.getElementById("proxima").value;
+if (marca==0) {
+  setTimeout("sai_notificacao()", 1700);
+
+alerta2.innerHTML="MARQUE PELO MENOS UMA ALTERNATIVA !!!"
+
+document.getElementById("alerta2").style.display = "block";
+}
+
+else if (alter =="d") {
+  certas = certas + 1;
+    document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "block";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+    marca=0;
+}else{
+      document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "block";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+    marca=0;
+}
+}
+
+function questao3() {
+alter = document.getElementById("proxima").value;
+if (marca==0) {
+  setTimeout("sai_notificacao()", 1700);
+
+alerta3.innerHTML="MARQUE PELO MENOS UMA ALTERNATIVA !!!"
+
+document.getElementById("alerta3").style.display = "block";
+}
+
+else if (alter =="a") {
+  certas = certas + 1;
+    document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "block";
+    document.getElementById("questao5").style.display = "none";
+    marca=0;
+}else{
+      document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "block";
+    document.getElementById("questao5").style.display = "none";
+    marca=0;
+}
+}
+
+function questao4() {
+alter = document.getElementById("proxima").value;
+if (marca==0) {
+setTimeout("sai_notificacao()", 1700);
+
+alerta4.innerHTML="MARQUE PELO MENOS UMA ALTERNATIVA !!!"
+
+document.getElementById("alerta4").style.display = "block";
+}
+
+else if (alter =="a") {
+  certas = certas + 1;
+    document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "block";
+    marca=0;
+}else{
+   document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "block";
+    marca=0;
+}
+}
+
+function questao5() {
+alter = document.getElementById("proxima").value;
+if (marca==0) {
+  setTimeout("sai_notificacao()", 1700);
+
+alerta5.innerHTML="MARQUE PELO MENOS UMA ALTERNATIVA !!!"
+
+document.getElementById("alerta5").style.display = "block";
+}
+
+else if (alter =="d") {
+  certas = certas + 1;
+    
+    document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+    alerta5.innerHTML=" "
+     alertaf.innerHTML="você acertou "+certas+"/5";
+     document.getElementById("inicio").style.display = "block";
+  
+}else{
+    document.getElementById("questao2").style.display = "none";
+    document.getElementById("questao1").style.display = "none";
+    document.getElementById("questao3").style.display = "none";
+    document.getElementById("questao4").style.display = "none";
+    document.getElementById("questao5").style.display = "none";
+     alerta5.innerHTML=" "
+    alertaf.innerHTML="você acertou "+certas+"/5";
+    document.getElementById("inicio").style.display = "block";
+}
+}
+
+
+
+
+	</script>
+
+
+	<style>
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+   width: 70%;
+
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+    border-radius: 50px 50px 50px;
+
+}
+
+.button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+    border-radius: 50px 50px 50px
+ 
+
+}
+
+.button:focus{
+  background: white;
+}
+
+.button1:focus {
+  background-color:white;
+  color: black;
+  font-size: 190%;
+  background: #90ee90;
+
+}
+
+#proxima:hover{
+background-color:green;
+
+
+}
+
+#proxima{
+width: 20% ;
+
+}
+  
+
+body{
+    background-image : url(img1.jpg);
+}
+#a ,#b,#c,#d {
+  text-align: left;
+}
+
+
+#letras{
+  border:1px solid black;
+  padding: 3px;
+  border-radius: 100%;
+}
+
+#alerta , #alerta2 , #alerta3, #alerta4 ,#alerta5 {    
+  font-family: "Montserrat", sans-serif;
+    background-color: #ff4133;
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 12px 15px 20px rgba(0,0,0,.16);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    display: none;
+}
+
+
+</style>
+
+
+
+
+</head>
+<body onLoad="recarregar()">
+	 <div class="row">
+    <div class="row container" style="margin-top: 4%; border: 1px solid #ccc;padding: 4%; background: white ">
+	      <div  class="grid-example col s12 center">
+
+	      	
+
+          <div id="questao1">
+
+                              <div class="grid-example col s12"><span class="flow-text">Em qual ano o Palmeiras conquistou o decacampeonato brasileiro?
+</span></div>
+
+                              
+
+           <div  class="grid-example col s12">   <button id="a" value="a" onclick="a()" required class="button button1">2012</button> </div>
+
+           <div class="grid-example col s12">    <button id="b" value="b" onclick="b()" class="button button1">2018</button> </div>
+
+          <div class="grid-example col s12">     <button id="c" value="c" onclick="c()" class="button button1">2016</button> </div>
+
+          <div class="grid-example col s12">   <button id="d" value="d" onclick="d()" class="button button1">2014</button> </div>
+
+      <button id="proxima" value="" onclick="questao1()" class="button button">proxima</button> 
+        <div class="grid-example col s12">  <h5 id="alerta" ></h5> </div>
+          </div>
+       
+
+                <div id="questao2">
+                              <div class="grid-example col s12"><span class="flow-text">Em qual o ano o Palmeiras foi fundado ?
+</span></div>
+
+             <div  class="grid-example col s12">   <button id="a" value="a" onclick="a()" class="button button1">1814</button> </div>
+
+           <div class="grid-example col s12">    <button id="b" value="b" onclick="b()" class="button button1">1910</button> </div>
+
+          <div class="grid-example col s12">     <button id="c" value="c" onclick="c()" class="button button1">1980</button> </div>
+
+          <div class="grid-example col s12">   <button id="d" value="d" onclick="d()" class="button button1">1914</button> </div>
+
+            <button id="proxima" value="" onclick="questao2()" class="button button">proxima</button>
+                    <div class="grid-example col s12">  <h5 id="alerta2" ></h5> </div>
+          </div>
+
+
+            <div  id="questao3">
+              <div class="grid-example col s12"><span class="flow-text">Qual foi o primeiro nome da Sociedade Esportiva Palmeiras?
+</span></div>
+       <div  class="grid-example col s12">   <button id="a" value="a" onclick="a()" class="button button1">Società Sportiva Palestra Italia</button> </div>
+
+           <div class="grid-example col s12">    <button id="b" value="b" onclick="b()" class="button button1">Palmeiras fc</button> </div>
+
+          <div class="grid-example col s12">     <button id="b" value="c" onclick="c()" class="button button1">palestra</button> </div>
+
+          <div class="grid-example col s12">   <button id="b" value="d" onclick="d()" class="button button1">Società italia</button> </div>
+
+           <button id="proxima" value="" onclick="questao3()" class="button button">proxima</button>
+              <div class="grid-example col s12">  <h5 id="alerta3" ></h5> </div>
+          </div>
+
+           <div  id="questao4">
+            <div class="grid-example col s12"><span class="flow-text">Qual o nome da principal torcida organizada do Palmeiras
+</span></div>
+        <div  class="grid-example col s12">   <button id="a" value="a" onclick="a()" class="button button1">Mancha verde</button> </div>
+
+           <div class="grid-example col s12">    <button id="b" value="b" onclick="b()" class="button button1">porco verde</button> </div>
+
+          <div class="grid-example col s12">     <button id="b" value="c" onclick="c()" class="button button1">Torcida Jovem do palmeiras</button> </div>
+
+          <div class="grid-example col s12">   <button id="b" value="d" onclick="d()" class="button button1">gaviões da fiel</button> </div>
+
+           <button id="proxima" value="" onclick="questao4()" class="button button">proxima</button>
+              <div class="grid-example col s12">  <h5 id="alerta4" ></h5> </div>
+
+          </div>
+
+           <div  id="questao5">
+            <div class="grid-example col s12"><span class="flow-text">Complete o hino do Palmeiras "Quando surge o alviverde imponente..."
+</span></div>
+            <div  class="grid-example col s12">   <button id="a" value="a" onclick="a()" class="button button1">no gramado em que aguarda</button> </div>
+
+           <div class="grid-example col s12">    <button id="b" value="b" onclick="b()" class="button button1">no estadio em que a luta o aguarda</button> </div>
+
+          <div class="grid-example col s12">     <button id="b" value="c" onclick="c()" class="button button1">no campo em que a luta o aguarda </button> </div>
+
+          <div class="grid-example col s12">   <button id="b" value="d" onclick="d()" class="button button1">no gramado em que a luta o aguarda</button> </div>
+
+           <button id="proxima" value="" onclick="questao5()" class="button buttonf">proxima</button>
+           <div class="grid-example col s12">  <h5 id="alerta5" ></h5> </div>
+
+          </div>
+              <div class="grid-example col s12 ">  <h2 id="alertaf" >  </h2>
+                             <div id="inicio"> <a href="quiz.html" class="waves-effect waves-light btn-large green z-depth-3">Inicio</a></div>
+
+
+
+               </div>
+
+</div>
+
+</div>
+
+       
+</body>
+</html>

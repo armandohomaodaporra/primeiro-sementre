@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>carro</title>
+
+
+<script>
+
+function recarregar() {
+	document.getElementById('ver').style.display="none"
+
+}
+		
+	function myclass() {
+
+document.getElementById('ver').style.display="inline-block"
+
+preco =parseFloat( document.getElementById('preco').value);
+
+document.getElementById("sai").style.display="block"
+if (preco == "") {
+			alert("digite um valor")
+			return limpar();
+}
+for (var i = 0; i <=10; i++) {
+
+
+		
+
+	parcela=i*6
+	percentual = i *(3/100)
+	precofinal=preco + (percentual*preco)
+	valordaparcela=(precofinal/parcela);
+
+infor.innerHTML="<h3> para um carro de " + preco+"$ temos a seguinte tabela de preços:</h3>";
+avista = preco-(0.2*preco)
+
+if (parcela == 6) {
+	final.innerHTML=precofinal;
+parcelas.innerHTML=parcela;
+valordaparcel.innerHTML=valordaparcela;
+
+
+
+}else if (parcela == 12) {
+	final2.innerHTML=precofinal;
+parcelas2.innerHTML=parcela;
+valordaparcel2.innerHTML=valordaparcela;
+
+}
+
+else if (parcela == 18) {
+	final3.innerHTML=precofinal;
+parcelas3.innerHTML=parcela;
+valordaparcel3.innerHTML=valordaparcela;
+
+}else if (parcela == 24) {
+	final4.innerHTML=precofinal;
+parcelas4.innerHTML=parcela;
+valordaparcel4.innerHTML=valordaparcela;
+
+}else if (parcela == 30) {
+	final5.innerHTML=precofinal;
+parcelas5.innerHTML=parcela;
+valordaparcel5.innerHTML=valordaparcela;
+
+}else if (parcela == 36) {
+	final6.innerHTML=precofinal;
+parcelas6.innerHTML=parcela;
+valordaparcel6.innerHTML=valordaparcela;
+
+}else if (parcela == 42) {
+	final7.innerHTML=precofinal;
+parcelas7.innerHTML=parcela;
+valordaparcel7.innerHTML=valordaparcela;
+
+}else if (parcela == 48) {
+	final8.innerHTML=precofinal;
+parcelas8.innerHTML=parcela;
+valordaparcel8.innerHTML=valordaparcela;
+
+}else if (parcela == 54) {
+	final9.innerHTML=precofinal;
+parcelas9.innerHTML=parcela;
+valordaparcel9.innerHTML=valordaparcela;
+
+}else if (parcela == 60) {
+	final10.innerHTML=precofinal;
+parcelas10.innerHTML=parcela;
+valordaparcel10.innerHTML=valordaparcela;
+
+}else{
+
+		final0.innerHTML=avista;
+parcelas0.innerHTML="1";
+valordaparcel0.innerHTML=avista;
+}
+
+}
+
+
+
+
+
+
+	/*
+parcela6 = preco + preco*0.03;
+parcela12 = preco + preco*0.06;
+parcela18= preco + preco*0.09;
+parcela24 = preco + preco*0.12
+parcela30 = preco + preco*0.15;
+parcela36= preco + preco*0.18;
+parcela42= preco + preco*0.21;
+parcela48 = preco + preco*0.24;
+parcela54= preco + preco*0.27;
+parcela60 = preco + preco*0.30;
+
+
+console.log(parcela60)
+
+
+*/
+	
+
+
+
+	}
+
+
+	function limpar() {
+		document.getElementById("sai").style.display="none"
+		document.getElementById("infor").style.display="none"
+		document.getElementById("ver").style.display="none"
+		document.getElementById("preco").value=""
+	}
+</script>
+
+<style>
+table, th, td  {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding-top: 8px;
+}
+
+	
+
+}
+</style>
+</head>
+<body  onLoad="recarregar()">
+<label><H1>CALCULO DE ORÇAMENTO</H1></label>
+<label><H4>DIGITE O VALOR DO CARRO:</H4></label>
+
+<tr>
+<input id="preco" value="0"  type="number" name="">
+
+
+
+<button  onclick="myclass()">ver</button><button id="ver" style="margin-left: 5px" onclick="limpar()">limpar</button><p>
+<div id="infor"></div>
+
+<div style="display: none" id="sai">
+
+<table style="width:100%;">
+
+
+
+
+
+  <tr>
+    <th>preço final</th>
+    <th>parcelas</th> 
+    <th>valor da parcela</th>
+  </tr>
+
+
+  <tr>
+
+    <td id="final0"></td>
+    <td id="parcelas0"></td>
+    <td id="valordaparcel0"></td>
+
+  </tr>
+
+
+  <tr>
+
+    <td id="final"></td>
+    <td id="parcelas"></td>
+    <td id="valordaparcel"></td>
+
+  </tr>
+
+
+  <tr>
+
+    <td id="final2"></td>
+    <td id="parcelas2"></td>
+    <td id="valordaparcel2"></td>
+
+  </tr>
+
+
+
+
+  <tr>
+
+    <td id="final3"></td>
+    <td id="parcelas3"></td>
+    <td id="valordaparcel3"></td>
+
+  </tr>
+
+
+
+  <tr>
+
+    <td id="final4"></td>
+    <td id="parcelas4"></td>
+    <td id="valordaparcel4"></td>
+
+  </tr>
+
+
+
+  <tr>
+
+    <td id="final5"></td>
+    <td id="parcelas5"></td>
+    <td id="valordaparcel5"></td>
+
+  </tr>
+
+
+
+
+  <tr>
+
+    <td id="final6"></td>
+    <td id="parcelas6"></td>
+    <td id="valordaparcel6"></td>
+
+  </tr>
+
+
+  <tr>
+
+    <td id="final7"></td>
+    <td id="parcelas7"></td>
+    <td id="valordaparcel7"></td>
+
+  </tr>
+
+
+
+  <tr>
+
+    <td id="final8"></td>
+    <td id="parcelas8"></td>
+    <td id="valordaparcel8"></td>
+
+  </tr>
+
+
+  <tr>
+
+    <td id="final9"></td>
+    <td id="parcelas9"></td>
+    <td id="valordaparcel9"></td>
+
+  </tr>
+
+
+  <tr>
+
+    <td id="final10"></td>
+    <td id="parcelas10"></td>
+    <td id="valordaparcel10"></td>
+
+  </tr>
+
+
+
+
+
+
+</table>
+</div>
+</body>
+</html>

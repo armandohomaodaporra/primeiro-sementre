@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teste</title>
+</head>
+<body>
+<script>
+
+const obj= {
+nome:'armando'
+
+
+}
+
+alertt(obg);
+
+</script>
+</body>
+</html>

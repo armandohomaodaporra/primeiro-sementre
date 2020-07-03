@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  	border-bottom: 1px solid black;
+
+
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#p{
+	    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+}
+</style>
+
+
+<script>
+    function mostra() {
+    document.getElementById("senha") .type="text";
+       document.getElementById("imagem").src = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"}
+
+
+
+    function esqueceu() {
+      var ns=prompt("digite a nova senha");
+      alert('a nova senha ' + ns)
+    }
+
+    function prox() {
+      var s=document.getElementById('senha');
+      if (s.value=="") {
+        senha.style.border="solid 2px red"
+        senha.placeholder="digite alguma senha"
+
+      }
+    }
+  </script>
+
+<div class="row container" style="margin-top: 4%">
+
+      <div class="grid-example col s12 m12 offset-l3 l6 "><span class="flow-text">
+        <div  style="border: 1px solid #ccc;padding: 4%; "> 
+
+         <center><img style="margin-top: 8%" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"></center>
+<center><h1 id="p"></style>Jose armando soares chagas</h1> </center>
+ <center><button style="font-size: 16px" class="w3-button  w3-border  w3-round-large">jose armando soares chagas<img src="https://img.icons8.com/ios-filled/20/000000/expand-arrow.png"/></button>
+</center>
+ <div class="row" style="margin: 4%">
+   
+         <div  class="col s1 offset-s1">
+  <img onclick="mostra()" src="https://img.icons8.com/metro/26/000000/visible.png"/> </div>
+<div  class="col s10 "  >
+    <input  type="password" id="senha"   placeholder="senha">
+</div>
+<div  class="col s6">
+
+<a onclick="esqueceu()" style="font-size: 16px; " href="#">esqueceu a senha</a></div>
+<div  class="col s4 offset-s2">
+ <button  onclick="prox()" style="font-size: 16px" class="w3-button  w3-border  w3-round-large">proximo</button>
+
+ 
+    
+</div>
+</div>
+
+</body>
+</html>

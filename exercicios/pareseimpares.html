@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pares e impares</title>
+	<script>
+		
+		
+
+		var cont = 0;
+		var par=0;
+		var impar=0;
+		function saber() {
+
+			if (cont<10) {
+			num =parseInt(document.getElementById("num").value);
+			if (num % 2 ==0) {
+				par=par+num;
+			} else {
+
+				impar=impar+num;
+			}
+
+			p.innerHTML="a soma dos numeros pares e "+par;
+			i.innerHTML="a soma dos numeros impares e "+impar;
+			cont=cont +1;
+
+		}else{
+			p.innerHTML="finalizou"
+			i.innerHTML=" "
+		}
+
+		}
+
+
+	</script>
+</head>
+<body>
+
+	<input type="number" id="num">
+
+<button onclick="saber()">testar</button>
+
+<div id="p">
+</div>
+<div id="i">
+</div>
+</body>
+</html>

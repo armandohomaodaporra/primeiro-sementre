@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>atividade</title>
+	<script>
+		var cont = 1;
+		function tes() {
+			
+			if (cont<11) {
+
+			aluno=document.getElementById("aluno").value;
+			nota1=parseInt(document.getElementById("nota1").value);
+			nota2=parseInt(document.getElementById("nota2").value);
+			var soma = nota1+nota2 ;
+			var media = soma /  2;
+			var conceito;
+
+			if (media>=9) {conceito="a"}
+				if (media >=7 || media < 9) {conceito="b"}
+					if (media >=6 || media < 7) {conceito="c"} 
+						if (media >=4 || media < 6) {conceito="d"}
+							if(media <4) {conceito="e"}
+			mensagem.innerHTML="o aluno "+aluno+" ficou no conceito "+ conceito;
+			cont = cont + 1;
+			
+
+		}else{
+			mensagem.innerHTML="nao é mais possivel limite de alunos sucedidos";
+		}
+	}
+
+	function limpar() {
+mensagem.innerHTML=" ";
+
+	}
+
+	</script>
+</head>
+<body>
+
+  <input type="string" id="aluno" placeholder="digite o nome do aluno"> <p>
+  <input type="string" id="nota1" placeholder="digite a primeira nota"><p>
+  <input type="string" id="nota2" placeholder="digite a segunda nota"><p>
+
+<button onclick="tes()">ver os resultados</button>
+<button onclick="limpar()">proximo aluno</button>
+
+   
+<div  id="mensagem">
+	<P id="nota"></P>
+
+</div>
+</body>
+</html>

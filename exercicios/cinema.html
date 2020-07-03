@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cinema</title>
+
+	<style>
+		input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+ 
+}
+	</style>
+
+	<script>
+		var cont =0;
+
+		function guardar() {
+			  M.toast({html: 'adicionado com sucesso'})
+
+			var obj ={
+			nome:document.getElementById('nome').value,
+			idade: document.getElementById('idade').value,
+			sexo :document.getElementById('sexo').value,
+			opiniao : document.getElementById('opiniao').value
+         }
+         
+if (cont <10) {
+
+	  objemstring = JSON.stringify(obj);
+         cont = cont +1;
+
+         localStorage.setItem("pessoa"+cont, objemstring)
+         
+}else{
+vembb.style.display="block"
+xaubb.style.display="none"
+}
+
+
+		}
+
+
+		function resuladofinal() {
+			aparece.style.display="block"
+			aparece1.style.display="block"
+			aparece2.style.display="block"
+
+obj1 =JSON.parse(localStorage.getItem('pessoa1'));
+obj2 =JSON.parse(localStorage.getItem('pessoa2'));
+obj3 =JSON.parse(localStorage.getItem('pessoa3'));
+obj4 =JSON.parse(localStorage.getItem('pessoa4'));
+obj5 =JSON.parse(localStorage.getItem('pessoa5'));
+obj6 =JSON.parse(localStorage.getItem('pessoa6'));
+obj7 =JSON.parse(localStorage.getItem('pessoa7'));
+obj8 =JSON.parse(localStorage.getItem('pessoa8'));
+obj9 =JSON.parse(localStorage.getItem('pessoa9'));
+obj10 =JSON.parse(localStorage.getItem('pessoa10'));
+
+
+
+
+p1.innerHTML=("primeira pessoa: <br> nome: "+obj1.nome+" <br> idade: "+obj1.idade+"<br>sexo:"+obj1.sexo+"<br>opinião:"+obj1.opiniao);
+p2.innerHTML=("segunda pessoa: <br> nome: "+obj2.nome+" <br> idade: "+obj2.idade+"<br>sexo:"+obj2.sexo+"<br>opinião:"+obj2.opiniao);
+
+p3.innerHTML=("terceira pessoa: <br> nome: "+obj3.nome+" <br> idade: "+obj3.idade+"<br>sexo:"+obj3.sexo+"<br>opinião:"+obj3.opiniao);
+p4.innerHTML=("quarta pessoa: <br> nome: "+obj4.nome+" <br> idade: "+obj4.idade+"<br>sexo:"+obj4.sexo+"<br>opinião:"+obj4.opiniao);
+
+p5.innerHTML=("quinta pessoa: <br> nome: "+obj5.nome+" <br> idade: "+obj5.idade+"<br>sexo:"+obj5.sexo+"<br>opinião:"+obj5.opiniao);
+
+p6.innerHTML=("sexta pessoa: <br> nome: "+obj6.nome+" <br> idade: "+obj6.idade+"<br>sexo:"+obj6.sexo+"<br>opinião:"+obj6.opiniao);
+p7.innerHTML=("setima pessoa: <br> nome: "+obj7.nome+" <br> idade: "+obj7.idade+"<br>sexo:"+obj7.sexo+"<br>opinião:"+obj7.opiniao);
+
+p8.innerHTML=("oitava pessoa: <br> nome: "+obj8.nome+" <br> idade: "+obj8.idade+"<br>sexo:"+obj8.sexo+"<br>opinião:"+obj8.opiniao);
+p9.innerHTML=("nona pessoa: <br> nome: "+obj9.nome+" <br> idade: "+obj9.idade+"<br>sexo:"+obj9.sexo+"<br>opinião:"+obj9.opiniao);
+
+p10.innerHTML=("decima pessoa: <br> nome: "+obj10.nome+" <br> idade: "+obj10.idade+"<br>sexo:"+obj10.sexo+"<br>opinião:"+obj10.opiniao);
+
+
+
+		}
+		
+	</script>
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+</head>
+<body>
+
+
+
+
+<div style=" margin: 0% 30% 4% 30%;">
+
+    <label for="fname">nome</label>
+    <input type="text" id="nome" name="firstname" placeholder="seu nome..">
+
+        <label for="fname">idade</label>
+    <input type="text" id="idade" name="firstname" placeholder="sua idade..">
+
+        <label for="fname">sexo</label>
+     <select id="sexo" class="browser-default">
+    <option value="" disabled selected>sexo</option>
+    <option value="masculino">masculino</option>
+    <option value="feminino">feminino</option>
+  </select>
+
+
+ <label for="fname">sexo</label>
+      <select id="opiniao" class="browser-default">
+    <option value="" disabled selected>opinião sobre o filme</option>
+    <option value="Exelente">6 </option>
+    <option value="Otimo">5 </option>
+    <option value="Bom">4 </option>
+    <option value="regular">3 </option>
+    <option value="ruim">2 </option>
+    <option value="pessimo">1</option>
+  </select>
+
+
+  
+    <input id="xaubb" type="submit" onclick="guardar()" value="guardar">
+    <input id="vembb" style="display: none" type="submit" onclick="resuladofinal()" value="Ver o resultado">
+
+</div>
+   </div>
+
+
+
+
+
+ 
+ <div id="aparece" class="row s12" style="display: none;">
+      <div id="p1" class="col s3">1</div>
+      <div id="p2" class="col s3">2</div>
+      <div id="p3" class="col s3">3</div>
+      <div id="p4" class="col s3">4</div>
+
+
+      
+</div>
+
+    
+
+       <div id="aparece1" class="row s12" style="display: none;">
+       <div id="p5" class="col s3">5</div>
+      <div id="p6" class="col s3">2</div>
+      <div id="p7" class="col s3">3</div>
+      <div id="p8" class="col s3">4</div>
+
+</div>
+      <div id="aparece2" class="row s12" style="display: none;">
+      <div id="p9" class="col s3">1</div>
+      <div id="p10" class="col s3">2</div>
+
+</body>
+</html>

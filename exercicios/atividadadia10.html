@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<style>
+input {padding:10px; margin:10px;} 
+	button {display:block; }
+</style>
+
+<script>
+function quiz(){
+
+
+var objetop = {"pergunta": "Qual o melhor jogador do mundo?"};
+
+document.getElementById("pergunta").innerHTML = objetop.pergunta;
+
+var objetor = { "respostas": 
+	[
+		 {"resposta1": "Gabigol"},
+		 {"resposta2": "Neymar"},
+		 {"resposta3": "Bruno Henrique"},
+		 {"resposta4": "caça rato"},
+		 {"resposta5": "ronaldo"},
+		
+		 
+	]
+};
+
+ document.getElementById("l1").innerHTML = objetor.respostas[0].resposta1;
+ document.getElementById("l2").innerHTML = objetor.respostas[1].resposta2;
+ document.getElementById("l3").innerHTML = objetor.respostas[2].resposta3;
+ document.getElementById("l4").innerHTML = objetor.respostas[3].resposta4;
+ document.getElementById("l5").innerHTML = objetor.respostas[4].resposta5;
+
+
+
+
+
+
+}
+
+function responder() {
+	melhor=document.querySelector('input[name="res"]:checked').value;
+if (melhor==1) {
+	alert("resposta correta")
+}else{
+	alert("resposta incorreta")
+}
+	
+
+
+	
+}
+
+</script>
+
+<body onload="quiz()">
+
+<h2 id="pergunta"> </h2>
+<hr>
+<input value="1" type="radio" name="res" id="r1"/>
+<span id="l1"></span>
+<input value="2" type="radio" name="res" id="r2"/>
+<span id="l2"></span>
+<input value="3" type="radio" name="res" id="r3"/>
+<span id="l3"></span>
+<input value="4" type="radio" name="res" id="r3"/>
+<span id="l4"></span>
+<input value="4" type="radio" name="res" id="r3"/>
+<span id="l5"></span>
+
+
+<button onclick="responder()">Responder</button>
+
+</body>
+</html>

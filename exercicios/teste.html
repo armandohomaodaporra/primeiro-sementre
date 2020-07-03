@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script>
+		function mostra() {
+		document.getElementById("senha") .type="text";
+		}
+		function esqueceu() {
+			var ns=prompt("digite a nova senha");
+			alert('a nova senha ' + ns)
+		}
+
+		function prox() {
+			var s=document.getElementById('senha');
+			if (s.value=="") {
+				senha.style.border="solid 2px red"
+				senha.placeholder="digite alguma senha"
+
+			}
+		}
+	</script>
+ 
+<a href="#" onclick="mostra()">mostrar</a>
+
+<input type="password" id="senha">
+<br>
+
+<a href="#" onclick="esqueceu()">esqueceu senha</a>
+<button onclick="prox()"> proximo</button>
+</body>
+</html>
