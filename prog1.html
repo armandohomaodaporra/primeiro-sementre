@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>media dos alunos</title>
+	<script>
+
+
+		mediageral=0;
+		indice = 0;
+		somageral=0;
+		function inserir(aluno,nota1,nota2) {
+
+			var obj= {
+"indice":indice=indice+1,
+"tb": tb = document.getElementById('tabela'),
+"quanlinhas":quanlinhas=indice,
+"linha":linha =tb.insertRow(quanlinhas),
+"media":media=(nota1+nota2 )/ 2,
+
+};
+
+
+		  linha.insertCell(0).innerHTML = quanlinhas;
+		  linha.insertCell(1).innerHTML=aluno;
+		  linha.insertCell(2).innerHTML=nota1;
+		  linha.insertCell(3).innerHTML=nota2;
+		  linha.insertCell(4).innerHTML=(nota1+nota2 )/ 2;
+		  linha.insertCell(5).innerHTML="<button>remover</button>";
+		  linha.setAttribute('id', indice);
+		  linha.setAttribute('onclick', "deletar(id)");
+
+
+		  somageral=somageral + media;
+		  mediageral=somageral/indice;
+
+
+
+
+		  
+
+		 
+		     
+
+}
+function deletar(cod) {
+document.getElementById('tabela').deleteRow(cod);
+document.getElementById('tabela').insertRow(cod).innerHTML="";;
+
+
+
+}
+function mediafinal() {
+	msg.innerHTML="<b>media geral = "+mediageral
+	msg.style.display="block"
+}
+	
+
+	</script>
+</head>
+<body>
+
+<div id="conteudo" style="margin:1% 20% 0% 20%">
+<form>
+
+	<input style="height: 48px;width: 274px;background: #c2e5f8;font-size: 18px;text-align: center;color: black;margin: 0px 8px 0px 0px" placeholder="Aluno" type="text" name="aluno">
+
+	<input style="height: 48px;width: 138px;background: #c2e5f8 ;font-size: 18px;text-align: center;color: black;margin: 0px 8px 0px 8px" placeholder="AV1" type="number" name="nota1">
+
+	<input style="height: 48px;width: 138px;background: #c2e5f8;font-size: 18px;text-align: center;color: black;margin: 0px 8px 0px 8px" placeholder="AV2" type="number" name="nota2">
+
+	<input style="height: 54px;width: 118px;background: #a3db76;border-radius: 10px;margin: 10px;font-size: 18px;text-align: center;color: black;margin: 0px 8px 0px 8px"   onclick="inserir(aluno.value,parseFloat(nota1.value),parseFloat(nota2.value))" type="button" value="Adicionar"></input>
+</form>
+
+
+<style>
+table {
+  border-collapse: collapse;
+ width: 100%
+
+
+}
+
+table, th, td {
+  border: 1px solid black;
+    height: 48px;
+    margin-top: 20px;
+    text-align:center;
+
+}
+
+button{
+	    height: 70%;
+    width: 50%;
+    border-radius: 5px;
+}
+button:hover{
+	    background: red
+
+}
+ </style>
+
+
+	<table id="tabela">
+		<thead>
+			<tr style="background: #99cdff;">
+				<td><b>Nº</b></td>
+				<td><b>nome</b></td>
+				<td><b>AV1</b></td>
+				<td><b>AV2</b></td>
+				<td><b>media</b></td>
+				<td><b>remover</b></td>
+			</tr>
+		</thead>
+	</table>
+
+	<button onclick="mediafinal()" style="height: 48px;width: 100%;background: #ffedab;font-size: 18px;text-align: center;color: black;margin-top: 5px"><b>EXIBIR  MEDIA GERAL</b></button>
+
+	<div style="display: none;height: 38px; width: 30%;background: #99cdff;font-size: 18px;text-align: center;color: black;margin-top: 1px;border-radius: 8px;padding-top: 4px" id="msg"></div>
+</div>
+</body>
+</html>
