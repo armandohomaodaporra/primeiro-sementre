@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="script.js" type="text/javascript"></script>   
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          
+	<title>quiz</title>
+
+	<style>
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color:green;
+  color: white;
+}
+
+a:visited {
+  background-color: yellow;
+  border-color: hotpink;
+  color: hotpink;
+}
+</style>
+
+
+
+</head>
+<body onLoad="recarregar()">
+	 <div class="row">
+	      <div class="grid-example col s12 center">
+	      	
+
+         
+       
+
+                <div id="questao2">
+                              <div class="grid-example col s12"><span class="flow-text">pergunta3</span></div>
+
+           <div  class="grid-example col s12"> <img id="a" src="https://img.icons8.com/color/30/000000/checked-checkbox.png"/>  <button id="a" value="a" onclick="a()" class="button button1">resposta 1</button> </div>
+
+           <div class="grid-example col s12">  <img id="b" src="https://img.icons8.com/color/30/000000/checked-checkbox.png"/> <button id="b" value="b" onclick="b()" class="button button1">resposta 1</button> </div>
+
+          <div class="grid-example col s12">  <img id="c" src="https://img.icons8.com/color/30/000000/checked-checkbox.png"/> <button id="c" value="c" onclick="c()" class="button button1">resposta 1</button> </div>
+
+          <div class="grid-example col s12">  <img id="d" src="https://img.icons8.com/color/30/000000/checked-checkbox.png"/> <button id="d" value="d" onclick="d()" class="button button1">resposta 1</button> </div>
+
+            <button id="responder" value="" onclick="questao4()" class="button button1">responder</button>
+          </div>
+
+
+
+</div>
+
+</body>
+</html>

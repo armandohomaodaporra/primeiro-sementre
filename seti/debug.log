@@ -1,0 +1,2 @@
+[0517/135723.713:ERROR:process_info.cc(359)] UncheckedAllocate
+[0517/135723.761:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\arman\AppData\Local\Google\Chrome\User Data\Crashpad\reports\9b0d306a-fdf1-40f5-b07f-c6d740fdf12d.dmp: O arquivo já está sendo usado por outro processo. (0x20)

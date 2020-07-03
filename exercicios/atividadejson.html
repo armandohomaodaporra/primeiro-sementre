@@ -16,8 +16,62 @@
 
 
 };
+ obj = JSON.stringify(obj);
+
+localStorage.setItem("dados",obj);
+
+
+
+function nome() {
+exibir = JSON.parse(localStorage.getItem("dados"));
+nome=(exibir.nome);
+nomes.innerHTML=nome;
+}
+
+
+function email() {
+exibir = JSON.parse(localStorage.getItem("dados"));
+email=(exibir.email);
+nomes.innerHTML=email ;
+}
+
+function idade() {
+exibir = JSON.parse(localStorage.getItem("dados"));
+idade=(exibir.idade);
+nomes.innerHTML=idade ;
+}
+
+
+function sexo() {
+exibir = JSON.parse(localStorage.getItem("dados"));
+sexo=(exibir.sexo);
+nomes.innerHTML=sexo ;
+}
+
+
+function telefone() {
+exibir = JSON.parse(localStorage.getItem("dados"));
+telefone=(exibir.telefone);
+nomes.innerHTML=telefone ;
+}
+
+
+
 
 
 </script>
+<center>
+<button onclick="nome()">nome</button>
+<button onclick="email()">email</button>
+<button onclick="idade()">idade</button>
+<button onclick="sexo()">sexo</button>
+<button onclick="telefone()">telefone</button>
+</center>
+
+<center><div id="nomes"></div> </center>
+
+
+
+
 </body>
 </html>
