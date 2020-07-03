@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teste</title>
+</head>
+<body>
+<script>
+	guardar=""
+	valor1=0;
+function inserir(valor) {
+	 guardar=guardar+valor;
+	document.getElementById('tela').value=guardar;
+}
+
+function somar() {
+	 guardar="";
+	 valor1=parseFloat(document.getElementById('tela').value);
+	 	document.getElementById('tela').value="";		
+	 	operacao="+";
+}
+
+function multiplicar() {
+	 guardar="";
+	 valor1=parseFloat(document.getElementById('tela').value);
+	 	document.getElementById('tela').value="";
+	 	operacao="*";	
+}
+
+
+function diminuir() {
+	 guardar="";
+	 valor1=parseFloat(document.getElementById('tela').value);
+	 	document.getElementById('tela').value="";
+	 	operacao="-";	
+}
+
+
+
+function dividir() {
+	 guardar="";
+	 valor1=parseFloat(document.getElementById('tela').value);
+	 	document.getElementById('tela').value="";
+	 	operacao="/";	
+}
+
+
+function resultado() {
+	valor2=parseFloat(document.getElementById('tela').value);
+
+
+	if (operacao=="+") {
+	document.getElementById('tela').value=valor1+valor2;
+	valor1=valor2}
+	else if (operacao=="*") {
+	document.getElementById('tela').value=valor1*valor2;
+	valor1=valor2}
+		else if (operacao=="-") {
+	document.getElementById('tela').value=valor1-valor2;
+	valor1=valor2}
+		else if (operacao=="/") {
+	document.getElementById('tela').value=valor1/valor2;
+	valor1=valor2}
+}
+function deletar() {
+	document.getElementById('tela').value="";
+	}
+</script>
+
+<style>
+	#inp{
+		background: white;
+		margin: 2px;
+		padding: 13px 20px 13px 20px;
+
+		}
+</style>
+
+<div style="text-align: center; ">
+<input style="padding: 15px 40px 15px 40px;     text-align: center;" type="text"  id="tela" disabled="disabled" name=""></div>
+<div style="text-align: center;margin-top: 7px">
+<input id="inp" onclick="inserir(1)" type="button" value="1" name="">
+<input id="inp" onclick="inserir(2)" type="button" value="2" name="">
+<input id="inp" onclick="inserir(3)" type="button" value="3" name="">
+<input id="inp" onclick="somar()" type="button" value="+" name="">
+<div style="text-align: center;margin-top: 7px">
+<input id="inp" onclick="inserir(4)" type="button" value="4" name="">
+<input id="inp" onclick="inserir(5)" type="button" value="5" name="">
+<input id="inp" onclick="inserir(6)" type="button" value="6" name="">
+<input id="inp" onclick="diminuir()" type="button" value="-" name="">
+<div style="text-align: center;margin-top: 7px">
+<input id="inp" onclick="inserir(7)" type="button" value="7" name="">
+<input id="inp"onclick="inserir(8)" type="button" value="8" name="">
+<input id="inp" onclick="inserir(9)" type="button" value="9" name="">
+<input id="inp" onclick="multiplicar()" type="button" value="x" name="">
+<div style="text-align: center;margin-top: 7px">
+	<input id="inp" onclick="inserir(value)" type="button" value="." name="">
+<input id="inp" onclick="inserir(0)" type="button" value="0" name="">
+
+
+<input id="inp" onclick="resultado()" type="button" value="=" name="">
+
+<input  id="inp" onclick="dividir()" type="button" value="/" name="">
+<div style="text-align: center;margin-top: 7px;">
+<input style="padding: 5px 80px 5px 80px;background: white;" onclick="deletar()" type="button" value="deletar" name="">
+
+</div>
+</body>
+</html>
