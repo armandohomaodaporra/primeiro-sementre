@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teste</title>
+</head>
+<script>
+	function dicionar(){ 
+nome = prompt("qual o seu nome")
+
+
+tb=document.getElementById('tabela');
+
+linha=tb.insertRow(1);
+
+
+linha.insertCell(0).innerHTML=nome
+
+ 
+}
+</script>
+
+<style>
+	table{
+ border-collapse: collapse;
+	}
+	tr,td{
+		border:1px solid black;
+
+	}
+</style>
+<body onload="dicionar()">
+
+<table id="tabela">
+		
+				<tr>
+				<td><b>nome</b></td>
+				<td><b>AV1</b></td>
+				<td><b>AV2</b></td>
+				</tr>
+
+			   
+	</table>
+</body>
+</html>
